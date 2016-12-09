@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/.IdeaIC2016.3/idea64.vmoptions">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/DocConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/GeneralDocsTestCreator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/wordnet-props.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/ConfigFiles/DIYAutomation/PR_nightly_CatLab.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/ConfigFiles/DIYAutomation/Upgradability_test.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/DIYReportWriter/src/main/java/com/tms/QA/tools/ReportWriter/ComparisonReportWriter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/DIYReportWriter/src/main/java/com/tms/QA/tools/ReportWriter/PR_ReportWriter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diy-categorization/diy-categorization-scott/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diy-categorization/diy-categorization-scott/src/main/java/com/tr/tms/diy/categorization/scott/input/CategorizationInstanceFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diy-categorization/diy-categorization-scott/src/main/java/com/tr/tms/diy/categorization/scott/utils/DocConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diy-scripts/diy-categorization-scripts/src/main/scala/random/RandomTestCreator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diy-scripts/diy-categorization-scripts/src/main/scala/random/RandomTestCreator.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/backend/src/main/resources/application.conf">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/common/src/main/resources/dev.conf">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/common/src/main/scala/com/tms/diy/actions/ml/SparkAction.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/common/src/main/scala/com/tms/diy/actors/MachineLearningActor.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/common/src/main/scala/com/tms/diy/service/DocStoreServiceWrapper.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/frontend/conf/application.conf">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorization/conf/categorization.routes">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorization/test/RandomTestCreator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorizationCommon/src/main/scala/com/tms/diy/categorization/actions/CategRunTestAction.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorizationCommon/src/main/scala/com/tms/diy/categorization/actions/docset/CategUploadPostProcessAction.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorizationCommon/src/main/scala/com/tms/diy/categorization/actions/docset/CleanupAction.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/DIY/diyplay/modules/categorizationCommon/src/main/scala/com/tms/diy/categorization/actions/train/CategTrainMainAction.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/svn/clfdev/TMS/SCoTT3.2/scottTemplates/categorization/src/main/java/com/clearforest/research/scottTemplates/categorization/preprocess/CategorizationInstanceExtractor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
