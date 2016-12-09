@@ -6,8 +6,7 @@ import net.sf.extjwnl.data.PointerUtils;
 import net.sf.extjwnl.data.list.PointerTargetNodeList;
 import net.sf.extjwnl.dictionary.Dictionary;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -32,34 +31,66 @@ public class DocConverter {
         }
     }
 
-    public String convert(String doc) throws JWNLException {
+    public String convert(String text, List<String> termsToConvers) throws JWNLException {
         logger.info("calculating generalized doc");
-        String[] tokens = doc.split(" ");
-        List<String> newTokens = new ArrayList<>();
 
-        for(String token : tokens) {
-            try {
-                IndexWord word = dictionary.getIndexWord(POS.NOUN, token);
-                if(word == null) {
-                    newTokens.add(token);
-                }
-                else {
-                    PointerTargetNodeList hypernyms = PointerUtils.getDirectHypernyms(word.getSenses().get(0));
-//                    System.out.println("Direct hypernyms of \"" + word.getLemma() + "\":");
-//                    hypernyms.print();
-                    if(hypernyms.size() > 0 && hypernyms.get(0).getSynset().getWords().size() > 0) {
-                        newTokens.add(hypernyms.get(0).getSynset().getWords().get(0).getLemma());
+        Set<String> set = new HashSet<>();
+        set.addAll(termsToConvers);
+        termsToConvers = new ArrayList<>(set);
+        Collections.sort(termsToConvers, new WordsCountComparator());
+
+        do {
+
+            String term = termsToConvers.remove(0);
+
+            if(term.split(" ").length == 1) {
+
+                IndexWord word = dictionary.getIndexWord(POS.NOUN, term);
+                if (word != null) {
+                    String hypernym = getWordHypernym(word);
+                    text = text.replaceAll(term, hypernym);
+                } else {
+                    word = dictionary.getIndexWord(POS.VERB, term);
+                    if (word != null) {
+                        String hypernym = getWordHypernym(word);
+                        text = text.replaceAll(term, hypernym);
+                    } else {
+                        word = dictionary.getIndexWord(POS.ADJECTIVE, term);
+                        if (word != null) {
+                            String hypernym = getWordHypernym(word);
+                            text = text.replaceAll(term, hypernym);
+                        } else {
+                            word = dictionary.getIndexWord(POS.ADVERB, term);
+                            if (word != null) {
+                                String hypernym = getWordHypernym(word);
+                                text = text.replaceAll(term, hypernym);
+                            }
+                        }
                     }
-                    else {
-                        newTokens.add(token);
-                    }
+
                 }
-            } catch (JWNLException e) {
-                e.printStackTrace();
-                newTokens.add(token);
             }
+
+        } while(termsToConvers.size() > 0);
+
+        return text;
+    }
+
+    private String getWordHypernym(IndexWord word) {
+        try {
+            PointerTargetNodeList hypernyms = PointerUtils.getDirectHypernyms(word.getSenses().get(0));
+            //                    System.out.println("Direct hypernyms of \"" + word.getLemma() + "\":");
+            //                    hypernyms.print();
+            if(hypernyms.size() > 0 && hypernyms.get(0).getSynset().getWords().size() > 0) {
+                return hypernyms.get(0).getSynset().getWords().get(0).getLemma();
+            }
+            else {
+                return word.getLemma();
+            }
+        } catch (JWNLException e) {
+            e.printStackTrace();
+            return word.getLemma();
         }
-        return join(newTokens, " ");
     }
 
     private String join(List<String> list, String conjunction) {
